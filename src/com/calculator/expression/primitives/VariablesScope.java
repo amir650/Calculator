@@ -14,8 +14,12 @@ public final class VariablesScope {
         this.variables = Collections.unmodifiableMap(builder.variables);
     }
 
-    public Expression lookup(final String key) {
-        return this.variables.get(key);
+    public Expression lookup(final String name) {
+        final Expression expression = this.variables.get(name);
+        if(expression != null) {
+            return this.variables.get(name);
+        }
+        throw new RuntimeException("No expression associated with variable " +name+ "!");
     }
 
     public static class Builder {

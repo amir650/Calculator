@@ -15,11 +15,7 @@ final class Variable implements Expression {
 
     @Override
     public int interpret()  {
-        final Expression expression = this.variables.lookup(this.name);
-        if(expression != null) {
-            return this.variables.lookup(this.name).interpret();
-        }
-        throw new RuntimeException("No expression associated with variable " +this.name+ "!");
+        return this.variables.lookup(this.name).interpret();
     }
 
 }
