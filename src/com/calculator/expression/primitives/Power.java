@@ -20,7 +20,7 @@ final class Power implements Expression {
 
     private static int power(int a, int b) {
         int result = 1;
-        for(int c=0;c<b;c++) {
+        for(int i = 0; i < b ;i++) {
             result *=a;
         }
         return result;
