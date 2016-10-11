@@ -15,14 +15,11 @@ final class Power implements Expression {
 
     @Override
     public int interpret()  {
-        return power(this.rightOperand.interpret(), this.leftOperand.interpret());
+        return powerImpl(this.rightOperand.interpret(), this.leftOperand.interpret());
     }
 
-    private static int power(int a, int b) {
-        int result = 1;
-        for(int i = 0; i < b ;i++) {
-            result *=a;
-        }
-        return result;
+    private static int powerImpl(final int a,
+                                 final int b) {
+        return b == 1 ? a : a * powerImpl(a, b - 1);
     }
 }
