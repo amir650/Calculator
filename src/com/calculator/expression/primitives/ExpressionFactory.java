@@ -6,6 +6,11 @@ import java.util.Stack;
 public class ExpressionFactory {
 
     private static final String EXPRESSION_DELIMITER = " ";
+    private static final String PLUS_TOKEN = "+";
+    private static final String MINUS_TOKEN = "-";
+    private static final String MULTIPLY_TOKEN = "*";
+    private static final String DIVIDE_TOKEN = "/";
+    private static final String POWER_TOKEN = "^";
 
     private ExpressionFactory(){
         throw new RuntimeException("Not instantiable!");
@@ -25,19 +30,19 @@ public class ExpressionFactory {
                                                   final VariablesScope variables) {
         final Expression subExpression;
         switch (token) {
-            case "+" :
+            case PLUS_TOKEN :
                 subExpression = new Plus(expressionStack.pop(), expressionStack.pop());
                 break;
-            case "-" :
+            case MINUS_TOKEN :
                 subExpression = new Minus(expressionStack.pop(), expressionStack.pop());
                 break;
-            case "*" :
+            case MULTIPLY_TOKEN :
                 subExpression = new Multiply(expressionStack.pop(), expressionStack.pop());
                 break;
-            case "/" :
+            case DIVIDE_TOKEN :
                 subExpression = new Divide(expressionStack.pop(), expressionStack.pop());
                 break;
-            case "^":
+            case POWER_TOKEN:
                 subExpression = new Power(expressionStack.pop(), expressionStack.pop());
                 break;
             default:
