@@ -1,12 +1,10 @@
 package com.calculator.expression.primitives;
 
-import com.calculator.expression.Expression;
-
 final class Number implements Expression {
 
     private final int number;
 
-    Number(final int number) {
+    private Number(final int number) {
         this.number = number;
     }
 
@@ -14,4 +12,9 @@ final class Number implements Expression {
     public int interpret()  {
         return this.number;
     }
+
+    static Number valueOf(final int number) {
+        return new Number(number);
+    }
+
 }

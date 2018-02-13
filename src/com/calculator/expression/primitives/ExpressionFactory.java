@@ -1,6 +1,5 @@
 package com.calculator.expression.primitives;
 
-import com.calculator.expression.Expression;
 import java.util.Stack;
 
 public class ExpressionFactory {

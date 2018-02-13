@@ -1,7 +1,5 @@
 package com.calculator.expression.primitives;
 
-import com.calculator.expression.Expression;
-
 final class Variable implements Expression {
 
     private final String name;

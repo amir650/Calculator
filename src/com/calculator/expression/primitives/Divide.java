@@ -1,7 +1,5 @@
 package com.calculator.expression.primitives;
 
-import com.calculator.expression.Expression;
-
 final class Divide implements Expression {
 
     private final Expression leftOperand;

@@ -1,7 +1,5 @@
 package com.calculator.expression.primitives;
 
-import com.calculator.expression.Expression;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +12,7 @@ public final class VariablesScope {
         this.variables = Collections.unmodifiableMap(builder.variables);
     }
 
-    public Expression lookup(final String name) {
+    Expression lookup(final String name) {
         final Expression expression = this.variables.get(name);
         if(expression != null) {
             return this.variables.get(name);
@@ -32,7 +30,7 @@ public final class VariablesScope {
 
         public Builder setVar(final String variable,
                               final int value) {
-            this.variables.put(variable, new Number(value));
+            this.variables.put(variable, Number.valueOf(value));
             return this;
         }
 

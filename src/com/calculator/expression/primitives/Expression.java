@@ -1,5 +1,8 @@
-package com.calculator.expression;
+package com.calculator.expression.primitives;
 
 public interface Expression {
+
     int interpret();
+
 }
+
