@@ -56,7 +56,7 @@ public class ExpressionFactory {
         if (token.matches("[a-z]")) {
             return new Variable(token, variables);
         }
-        throw new RuntimeException("Invalid variable name: " +token);
+        throw new IllegalArgumentException("Invalid variable name: " +token);
     }
 
 }

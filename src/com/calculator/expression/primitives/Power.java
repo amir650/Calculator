@@ -13,11 +13,16 @@ final class Power implements Expression {
 
     @Override
     public int interpret()  {
-        return powerImpl(this.rightOperand.interpret(), this.leftOperand.interpret());
+        final int x = this.rightOperand.interpret();
+        final int y = this.leftOperand.interpret();
+        if(y < 0) {
+            throw new UnsupportedOperationException("Not supported!");
+        }
+        return powerImpl(x, y);
     }
 
     private static int powerImpl(final int a,
                                  final int b) {
-        return b == 1 ? a : a * powerImpl(a, b - 1);
+        return b == 0 ? 1 : a * powerImpl(a, b - 1);
     }
 }

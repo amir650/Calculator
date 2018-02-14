@@ -13,6 +13,11 @@ final class Divide implements Expression {
 
     @Override
     public int interpret()  {
-        return this.rightOperand.interpret() / this.leftOperand.interpret();
+        final int numerator = this.rightOperand.interpret();
+        final int denominator = this.leftOperand.interpret();
+        if(denominator == 0) {
+            throw new ArithmeticException("Divide by zero!");
+        }
+        return numerator / denominator;
     }
 }
