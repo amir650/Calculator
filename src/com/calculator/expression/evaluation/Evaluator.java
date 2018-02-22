@@ -1,8 +1,8 @@
 package com.calculator.expression.evaluation;
 
-import com.calculator.expression.primitives.Expression;
-import com.calculator.expression.primitives.ExpressionFactory;
-import com.calculator.expression.primitives.VariablesScope;
+import com.calculator.expression.operators.Expression;
+import com.calculator.expression.operators.ExpressionFactory;
+import com.calculator.expression.operators.VariablesScope;
 
 public final class Evaluator {
 

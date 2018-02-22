@@ -1,7 +1,7 @@
 package com.tests.calculator.expression;
 
 import com.calculator.expression.evaluation.Evaluator;
-import com.calculator.expression.primitives.VariablesScope;
+import com.calculator.expression.operators.VariablesScope;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

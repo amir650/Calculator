@@ -1,4 +1,4 @@
-package com.calculator.expression.primitives;
+package com.calculator.expression.operators;
 
 final class Variable implements Expression {
 

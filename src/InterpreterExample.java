@@ -1,5 +1,5 @@
 import com.calculator.expression.evaluation.Evaluator;
-import com.calculator.expression.primitives.VariablesScope;
+import com.calculator.expression.operators.VariablesScope;
 
 import java.util.Scanner;
 
