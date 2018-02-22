@@ -20,4 +20,5 @@ final class Divide implements Expression {
         }
         return numerator / denominator;
     }
+
 }

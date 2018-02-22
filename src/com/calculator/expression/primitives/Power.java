@@ -25,4 +25,5 @@ final class Power implements Expression {
                                  final int b) {
         return b == 0 ? 1 : a * powerImpl(a, b - 1);
     }
+
 }

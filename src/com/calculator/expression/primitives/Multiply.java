@@ -15,4 +15,5 @@ final class Multiply implements Expression {
     public int interpret()  {
         return this.leftOperand.interpret() * this.rightOperand.interpret();
     }
+
 }

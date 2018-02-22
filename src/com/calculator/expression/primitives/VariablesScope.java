@@ -17,7 +17,7 @@ public final class VariablesScope {
         if(expression != null) {
             return this.variables.get(name);
         }
-        throw new RuntimeException("No expression associated with variable " +name+ "!");
+        throw new IllegalArgumentException("No expression associated with variable " +name+ "!");
     }
 
     public static class Builder {

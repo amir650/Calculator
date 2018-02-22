@@ -27,7 +27,7 @@ final class Number implements Expression {
     }
 
     static Number valueOf(final int number) {
-        if(NUMBER_CACHE.get(number) != null) {
+        if(number >= 0 && number < 1000) {
             return NUMBER_CACHE.get(number);
         }
         return new Number(number);

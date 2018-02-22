@@ -15,4 +15,5 @@ final class Minus implements Expression {
     public int interpret()  {
         return this.rightOperand.interpret() - this.leftOperand.interpret();
     }
+
 }

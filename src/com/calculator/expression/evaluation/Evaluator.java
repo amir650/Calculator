@@ -21,4 +21,5 @@ public final class Evaluator {
                                               final VariablesScope variables) {
         return ExpressionFactory.createExpression(expressionText, variables);
     }
+
 }
