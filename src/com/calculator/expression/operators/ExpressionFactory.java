@@ -55,6 +55,8 @@ public class ExpressionFactory {
                                                        final VariablesScope variables) {
         if (token.matches("[a-z]")) {
             return new Variable(token, variables);
+        } else if(token.matches("[0-9]+")) {
+            return Number.valueOf(Integer.parseInt(token));
         }
         throw new IllegalArgumentException("Invalid variable name: " +token);
     }

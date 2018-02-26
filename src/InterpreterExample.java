@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 final public class InterpreterExample {
     public static void main(String[] args) {
-
-        commandLine();
-
+        simpleExample();
     }
 
     private static void commandLine() {
@@ -31,13 +29,8 @@ final public class InterpreterExample {
     }
 
     private static void simpleExample() {
-        final VariablesScope variables =
-                new VariablesScope.Builder()
-                        .setVar("a", 2)
-                        .setVar("b", 2)
-                        .build();
-        final String expressionText = "a b ^";
-        final Evaluator evaluator = new Evaluator(expressionText, variables);
+        final String expressionText = "15 7 1 1 + - / 3 * 2 1 1 + + -";
+        final Evaluator evaluator = new Evaluator(expressionText);
         final int result = evaluator.evaluate();
         System.out.println(result);
     }

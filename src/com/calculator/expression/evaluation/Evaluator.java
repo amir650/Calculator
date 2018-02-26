@@ -8,6 +8,10 @@ public final class Evaluator {
 
     private final Expression syntaxTree;
 
+    public Evaluator(final String expressionText) {
+        this.syntaxTree = buildSyntaxTree(expressionText, null);
+    }
+
     public Evaluator(final String expressionText,
                      final VariablesScope variables) {
         this.syntaxTree = buildSyntaxTree(expressionText, variables);
